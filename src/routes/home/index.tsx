@@ -4,8 +4,8 @@ import * as style from "./style.css";
 const Home: FunctionalComponent = () => {
     return (
         <div class={style.home}>
-            <h1>Home</h1>
-            <p>This is the Home component.</p>
+            <h1>Faqja kryesore</h1>
+            <p>Kjo është faqja kryesore...</p>
         </div>
     );
 };
