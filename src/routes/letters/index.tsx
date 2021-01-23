@@ -3,7 +3,12 @@ import { useEffect, useState } from "preact/hooks";
 import * as style from "./style.css";
 
 const Letters: FunctionalComponent = () => {
-    const letters = ["A", "B", "C", "Ç", "D", "Dh", "E", "Ë", "F", "G", "Gj", "H", "I", "J", "K", "L", "Ll", "M", "N", "Nj", "O", "P", "Q", "R", "Rr", "S", "Sh", "T", "Th", "U", "V", "W", "X", "Xh", "Y", "Z", "Zh"];
+    const letters = [
+        "A", "B", "C", "Ç", "D", "Dh", "E", "Ë", "F", "G", "Gj",
+        "H", "I", "J", "K", "L", "Ll", "M", "N", "Nj", "O", "P",
+        "Q", "R", "Rr", "S", "Sh", "T", "Th", "U", "V", "W", "X",
+        "Xh", "Y", "Z", "Zh"
+    ];
     const [letter, setLetter] = useState<string>(letters[0]);
 
     // update the currently shown letter
