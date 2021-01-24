@@ -8,7 +8,7 @@
     /* text-transform: uppercase; */
 }
 
-,lower {
+.lower {
     text-transform: lowercase;
 }
 
@@ -19,6 +19,9 @@
 .button {
     font-size: 170%;
     text-transform: uppercase;
-    background-color: blueviolet;
-    color: white;
+}
+
+.clicker {
+    font-size: 170%;
+    display: inline;
 }

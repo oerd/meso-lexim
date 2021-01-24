@@ -9,16 +9,17 @@ const Letters: FunctionalComponent = () => {
         "Q", "R", "Rr", "S", "Sh", "T", "Th", "U", "V", "W", "X",
         "Xh", "Y", "Z", "Zh"
     ];
+    const [auto, setAuto] = useState<boolean>(true);
     const [letter, setLetter] = useState<string>(letters[0]);
 
     // update the currently shown letter
     const getNextLetter = () => {
-        setLetter(letters[Math.floor(Math.random() * letters.length)]);
+        return letters[Math.floor(Math.random() * letters.length)];
     };
 
     // gets called when this route is navigated to
     useEffect(() => {
-        const randomizeLetter = window.setInterval(() => getNextLetter(), 5 * 1000);
+        const randomizeLetter = window.setInterval(() => setLetter(getNextLetter()), 3 * 1000);
 
         // gets called just before navigating away from the route
         return () => {
@@ -30,8 +31,8 @@ const Letters: FunctionalComponent = () => {
         <div class={style.letters}>
             <h1>GJEJ GËRMËN</h1>
             <p class={style.big}>{letter}</p>
-
-            <button class={style.button} onClick={getNextLetter}>Përsëri</button>
+            <div class={style.clicker} onClick={() => (setAuto(!auto))}> {auto ? '⏸' : '▶️'}</div>
+            {auto ? '' : <button class={style.button} onClick={getNextLetter}>Tjetër</button>}
         </div>
     );
 };

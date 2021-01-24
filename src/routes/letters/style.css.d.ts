@@ -3,7 +3,9 @@ declare namespace StyleCssNamespace {
     export interface IStyleCss {
         big: string;
         button: string;
+        clicker: string;
         letters: string;
+        lower: string;
         upper: string;
     }
 }
